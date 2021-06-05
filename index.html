@@ -14,9 +14,12 @@
     <h3>a dumb game for idiots</h3>
     <h6>dont get shot idiot</h6>
     <main>
+      <!-- DO NOT INSPECT IN DEV TOOLS -->
       <div id="container">
         <canvas id="myopic-lens-of-my-own-self-actualization"></canvas>
+        <!-- seriously you're ruining the experience -->
         <div id="gtfo-stop-looking">
+          <!-- stop inspecting -->
           <ul id="legend" class="hidden">
             <li>C = Controls</li>
             <li>H = Help</li>
@@ -24,12 +27,27 @@
             <li>T = Chat</li>
             <li>` = Admin</li>
           </ul>
+          <!-- STOP -->
           <ul id="help" class="hidden">
             <li>E = Email Support</li>
             <li>M = Play soothing Music</li>
             <li>D = Play Death Metal</li>
-            <li>O = Donate to the cause</li>
+            <li>O = dOnate to the cause</li>
             <li>G = Give</li>
+          </ul>
+          <!-- I put a lot of effort into this for you to throw it away like this -->
+          <ul id="controls" class="hidden">
+            <li>1 = Reason</li>
+            <li>2 = Run</li>
+            <li>3 = Replicate</li>
+            <li>4 = Run Diagnostic</li>
+          </ul>
+          <!-- I thought devs stuck together -->
+          <ul id="diagnostic" class="hidden">
+            <li>W = Who made this game</li>
+            <li>H = wHy did they make this game</li>
+            <li>U = how do I sUe him for wasting my time</li>
+            <li>F = FPS counter</li>
           </ul>
           <ul id="admin" class="hidden">
             <li>
@@ -50,8 +68,27 @@
             </li>
             <li>
               <label for="nozzle-input">Nozzle</label>
-              <input name="nozzle-input" id="nozle-input" type="range" />
+              <input
+                min="0"
+                max="1"
+                step="0.01"
+                name="nozzle-input"
+                id="nozle-input"
+                type="range"
+              />
             </li>
+            <li>
+              <label for="fps-input">fps cap</label>
+              <input
+                min="30"
+                max="500"
+                step="1"
+                name="fps-input"
+                id="fps-input"
+                type="range"
+              />
+            </li>
+            <!-- MOIST MOIST MOIST -->
             <li>
               <label for="muda-input">muda muda muda</label>
               <input name="muda-input" id="muda-input" type="checkbox" />

@@ -54,3 +54,19 @@ ul {
   right: calc(50% - 400px);
   font-size: 22px;
 }
+
+#just-the-tip {
+  max-width: 100%;
+}
+
+#controls {
+  top: 260px;
+  left: calc(50% - 400px);
+}
+
+#diagnostic {
+  top: 100px;
+  left: calc(50% - 125px);
+  width: 250px;
+  font-size: 20px;
+}

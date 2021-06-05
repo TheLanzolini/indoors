@@ -1,13 +1,54 @@
 const __0x1 =
   "d2UndmUgYmVlbiB0cnlpbmcgdG8gcmVhY2ggeW91IGFib3V0IHlvdXIgY2FyJ3MgZXh0ZW5kZWQgd2FycmFudHk=";
-const GIVE_BACK_HALLELLUJAH = `<iframe width="560" height="315" src="https://www.youtube.com/embed/GM205iK6rlg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+const GIVE_BACK_HALLELLUJAH = "https://www.youtube.com/embed/GM205iK6rlg";
+const SOOTH = "https://www.youtube.com/embed/5qap5aO4i9A";
+const METAL = "https://www.youtube.com/embed/wPSWsz2R6Xc";
+const EMAIL_SUPPORT =
+  "mailto:support@lanzo.tv?subject=I%20need%20help%20with%20inddors!&body=Please%20tell%20me%20the%20answer%20I%20do%20not%20know%20how%20to%20make%20progress%20in%20this%20%22game%22%20if%20you%20can%20even%20call%20it%20that.%20I%20probably%20have%20spent%20less%20than%205%20minutes%20trying%20shit%20and%20now%20since%20the%20digital%20information%20age%20has%20destroyed%20my%20natural%20ability%20to%20be%20patient%2C%20I%20need%20the%20gratification%20now%20or%20I%20will%20stop%20playing%20your%20game.";
 
 const LENS_WIDTH = 900;
 const LENS_HEIGHT = 600;
-const TARGET_FPS = 60;
+let TARGET_FPS = 60;
 
 const LENS_MID_W = LENS_WIDTH / 2;
 const LENS_MID_H = LENS_HEIGHT / 2;
+
+const destroyYoutube = () => {
+  document.getElementById("embedded-joke") &&
+    document.body.removeChild(document.getElementById("embedded-joke"));
+};
+
+const playYoutubeUrl = (url) => {
+  destroyYoutube();
+  const $e = document.createElement("div");
+  $e.id = "embedded-joke";
+  const $iframe = document.createElement("iframe");
+  $iframe.width = 560;
+  $iframe.height = 315;
+  $iframe.src = `${url}?autoplay=1`;
+  $iframe.title = "YouTube video player";
+  $iframe.setAttribute("frameborder", "0");
+  $iframe.setAttribute(
+    "allow",
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  );
+  $iframe.setAttribute("allowfullscreen", "");
+  $e.appendChild($iframe);
+  document.body.appendChild($e);
+};
+
+const showPanhandle = () => {
+  if (document.getElementById("just-the-tip")) return;
+  const $i = new Image();
+  $i.id = "just-the-tip";
+  $i.src = "tipping-is-wage-theft.png";
+  document.body.appendChild($i);
+};
+
+const hidePanhandle = () => {
+  document.getElementById("just-the-tip") &&
+    document.body.removeChild(document.getElementById("just-the-tip"));
+};
 
 ((w) => {
   const $c = document.getElementById(
@@ -27,6 +68,7 @@ const LENS_MID_H = LENS_HEIGHT / 2;
   let backgroundColor = "#000000";
   let nhozz = 1;
   let nozzle = MUDA_MUDA_god_mode ? 0.25 : nhozz;
+  let bulletTimeout = null;
   window.$c = $c;
   $c.width = LENS_WIDTH;
   $c.height = LENS_HEIGHT;
@@ -86,6 +128,18 @@ const LENS_MID_H = LENS_HEIGHT / 2;
       ctx.textAlign = "center";
       ctx.fillText("YOU", LENS_MID_W, LENS_HEIGHT - 75);
     }
+  };
+
+  const reason = () => {
+    console.log("reason");
+  };
+
+  const run = () => {
+    console.log("run");
+  };
+
+  const replicate = () => {
+    console.log("replicate");
   };
 
   class Bullet {
@@ -197,6 +251,14 @@ const LENS_MID_H = LENS_HEIGHT / 2;
     };
     $bpsInput.addEventListener("input", onBpsInput);
 
+    const $fpsInput = document.getElementById("fps-input");
+    $fpsInput.value = TARGET_FPS;
+    const onFpsInput = (e) => {
+      TARGET_FPS = Number(e.target.value);
+    };
+
+    $fpsInput.addEventListener("input", onFpsInput);
+
     const $mudaInput = document.getElementById("muda-input");
     const onMudaInput = (e) => {
       MUDA_MUDA_god_mode = e.target.checked;
@@ -205,26 +267,96 @@ const LENS_MID_H = LENS_HEIGHT / 2;
   };
 
   const KEYBINDS = {
+    _removeAllBut: (key) => {
+      Object.keys(KEYBINDS).forEach((k) => {
+        if (k !== key && !k.includes("_")) {
+          delete KEYBINDS[k];
+        }
+      });
+    },
+    _deleteSeries: (keys) => {
+      keys.forEach((k) => {
+        delete KEYBINDS[k];
+      });
+    },
     _KeyLToggled: false,
-
+    _KeyHToggled: false,
+    _KeyCToggled: false,
+    _Digit4Toggled: false,
     KeyL: () => {
       KEYBINDS._KeyLToggled = !KEYBINDS._KeyLToggled;
       if (KEYBINDS._KeyLToggled) {
         KEYBINDS["KeyC"] = () => {
-          console.log("hit c");
+          KEYBINDS._KeyCToggled = !KEYBINDS._KeyCToggled;
+          if (KEYBINDS._KeyCToggled) {
+            document.getElementById("controls").classList.remove("hidden");
+            KEYBINDS["Digit1"] = () => {
+              reason();
+            };
+            KEYBINDS["Digit2"] = () => {
+              run();
+            };
+            KEYBINDS["Digit3"] = () => {
+              replicate();
+            };
+            KEYBINDS["Digit4"] = () => {
+              // runDiagnostic();
+              KEYBINDS._Digit4Toggled = !KEYBINDS._Digit4Toggled;
+              if (KEYBINDS._Digit4Toggled) {
+                document
+                  .getElementById("diagnostic")
+                  .classList.remove("hidden");
+                KEYBINDS["KeyF"] = () => {
+                  fpsEnabled = !fpsEnabled;
+                };
+                KEYBINDS["KeyW"] = () => {
+                  window.open("https://www.linkedin.com/in/alex-lanzoni/");
+                };
+                KEYBINDS["KeyH"] = () => {
+                  window.open(
+                    "https://media3.giphy.com/media/5xaOcLCp8sxC25mCwec/giphy.gif"
+                  );
+                };
+                KEYBINDS["KeyU"] = () => {
+                  window.open(
+                    "https://letmegooglethat.com/?q=how+to+sue+a+stranger+for+wasting+my+time"
+                  );
+                };
+              } else {
+                document.getElementById("diagnostic").classList.add("hidden");
+                KEYBINDS._deleteSeries(["KeyF"]);
+              }
+            };
+          } else {
+            document.getElementById("controls").classList.add("remove");
+          }
         };
         KEYBINDS["KeyH"] = () => {
-          console.log("hit h");
-          document.getElementById("help").classList.remove("hidden");
-          KEYBINDS["KeyG"] = () => {
-            const $e = document.createElement("div");
-            $e.id = "give-back";
-            $e.innerHTML = GIVE_BACK_HALLELLUJAH;
-            document.body.appendChild($e);
-          };
+          KEYBINDS._KeyHToggled = !KEYBINDS._KeyHToggled;
+          if (KEYBINDS._KeyHToggled) {
+            document.getElementById("help").classList.remove("hidden");
+            KEYBINDS["KeyG"] = () => {
+              playYoutubeUrl(GIVE_BACK_HALLELLUJAH);
+            };
+            KEYBINDS["KeyM"] = () => {
+              playYoutubeUrl(SOOTH);
+            };
+            KEYBINDS["KeyD"] = () => {
+              playYoutubeUrl(METAL);
+            };
+            KEYBINDS["KeyO"] = () => {
+              showPanhandle();
+            };
+            KEYBINDS["KeyE"] = () => {
+              window.open(EMAIL_SUPPORT);
+            };
+          } else {
+            KEYBINDS._deleteSeries(["KeyG", "KeyM", "KeyD", "KeyO", "KeyE"]);
+            hidePanhandle();
+            document.getElementById("help").classList.add("hidden");
+          }
         };
         KEYBINDS["KeyR"] = () => {
-          console.log("hit r");
           reset();
         };
         KEYBINDS["KeyT"] = () => {
@@ -232,14 +364,10 @@ const LENS_MID_H = LENS_HEIGHT / 2;
         };
         document.getElementById("legend").classList.remove("hidden");
       } else {
-        delete KEYBINDS["KeyC"];
-        delete KEYBINDS["KeyH"];
-        delete KEYBINDS["KeyR"];
-        delete KEYBINDS["KeyT"];
+        KEYBINDS._removeAllBut("KeyL");
         document.getElementById("legend").classList.add("hidden");
         document.getElementById("help").classList.add("hidden");
-        document.getElementById("give-back") &&
-          document.body.removeChild(document.getElementById("give-back"));
+        destroyYoutube();
       }
     },
     Backquote: () => {
@@ -270,13 +398,13 @@ const LENS_MID_H = LENS_HEIGHT / 2;
     }
   };
 
-  const fpsInterval = 1000 / TARGET_FPS;
+  fpsInterval = 1000 / TARGET_FPS;
   then = Date.now();
   startTime = then;
 
   const amIReallyDoingThis = () => {
     if (!bail) w.requestAnimationFrame(amIReallyDoingThis);
-
+    fpsInterval = 1000 / TARGET_FPS;
     now = Date.now();
     elapsed = now - then;
     if (elapsed > fpsInterval) {
@@ -299,11 +427,10 @@ const LENS_MID_H = LENS_HEIGHT / 2;
     shots++;
     bullets.push(bullet);
     bps += MUDA_MUDA_god_mode ? 10 : 0.025;
-    console.log("bps", bps);
-    if (!bail) setTimeout(goBulletGo, 1000 / bps);
+    if (!bail) bulletTimeout = setTimeout(goBulletGo, 1000 / bps);
   };
 
-  setTimeout(goBulletGo, 1000 / bps);
+  bulletTimeout = setTimeout(goBulletGo, 1000 / bps);
 
   setTimeout(() => {
     paintYou = false;
@@ -317,7 +444,8 @@ const LENS_MID_H = LENS_HEIGHT / 2;
     bps = 0.2;
     shots = 0;
     bullets = [];
-    setTimeout(goBulletGo, 1000 / bps);
+    clearTimeout(bulletTimeout);
+    bulletTimeout = setTimeout(goBulletGo, 1000 / bps);
     amIReallyDoingThis();
   };
 })(window);
