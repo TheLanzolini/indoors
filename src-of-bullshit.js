@@ -32,13 +32,8 @@ const __1x0 = {
   "aGk=": "c3Vw",
   dXd1: "Z3Jvc3M=",
   "c3RvcA==": "c3RvcCB3aGF0",
+  d2hhdCBkbyBpIGRv: "aWRrIGxvb2sgY2xvc2Vy",
 };
-
-const encode = (c) =>
-  Object.entries(c).reduce((acc, [k, v]) => {
-    acc[btoa(k)] = btoa(v);
-    return acc;
-  }, {});
 
 const __0x2 = "Z3VucyBjYW4ndCB0YWxrIGlkaW90";
 const __0x3 = "Z3VucyBzdGlsbCBjYW4ndCB0YWxr";
@@ -240,9 +235,9 @@ const main = (w, $c) => {
     const $d = document.createElement("div");
     $d.textContent = `Me: ${msg}`;
     document.getElementById("chat-log").appendChild($d);
-    if (__1x0[btoa(msg)]) {
+    if (__1x0[btoa(msg.toLowerCase())]) {
       const $dd = document.createElement("div");
-      $dd.textContent = `Game: ${atob(__1x0[btoa(msg)])}`;
+      $dd.textContent = `Game: ${atob(__1x0[btoa(msg.toLowerCase())])}`;
       document.getElementById("chat-log").appendChild($dd);
     }
     if (messages > 7 && messages < 9) {
@@ -526,7 +521,6 @@ const main = (w, $c) => {
     if (!reasonEnabled) return;
     ctx.fillStyle = "silver";
     ctx.font = "28px Courier New";
-    console.log(reasons);
     if (reasons > 3 && reasons <= 10) {
       ctx.fillText(atob(__0x3), LENS_MID_W, 200);
     } else if (reasons > 10 && reasons <= 20) {

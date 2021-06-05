@@ -118,3 +118,14 @@ ul {
   font-size: 18px;
   margin-left: 6px;
 }
+
+#hard-reset {
+  background-image: url("R_E_S_E_T.jpg");
+  background-size: 100% auto;
+  width: 100px;
+  height: 50px;
+  border: none;
+  text-indent: -99999999999999px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
