@@ -18,7 +18,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 ul {
@@ -69,4 +69,52 @@ ul {
   left: calc(50% - 125px);
   width: 250px;
   font-size: 20px;
+}
+
+#chat {
+  position: absolute;
+  background-color: black;
+  left: calc(50% - 430px);
+  bottom: 60px;
+  border: 1px solid white;
+  height: 150px;
+  width: 300px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  overflow-y: hidden;
+}
+
+#chat input {
+  color: white;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 6px;
+}
+
+#chat input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+#chat input:-ms-input-placeholder {
+  color: white;
+}
+
+#chat input::-ms-input-placeholder {
+  color: white;
+}
+
+#chat input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+#chat-log {
+  font-family: "ZCOOL KuaiLe", sans-serif;
+  font-size: 18px;
+  margin-left: 6px;
 }
