@@ -1,3 +1,5 @@
+// super secret dont look
+// seriously you're breaking immersion
 const __0x1 =
   "d2UndmUgYmVlbiB0cnlpbmcgdG8gcmVhY2ggeW91IGFib3V0IHlvdXIgY2FyJ3MgZXh0ZW5kZWQgd2FycmFudHk=";
 const GIVE_BACK_HALLELLUJAH = "https://www.youtube.com/embed/GM205iK6rlg";
@@ -7,6 +9,7 @@ const COLE_TRAIN_I_GET_IT_NOW_OMG = "https://www.youtube.com/embed/yPk1LtESE-U";
 const EMAIL_SUPPORT =
   "mailto:support@lanzo.tv?subject=I%20need%20help%20with%20indoors!&body=Please%20tell%20me%20the%20answer%20I%20do%20not%20know%20how%20to%20make%20progress%20in%20this%20%22game%22%20if%20you%20can%20even%20call%20it%20that.%20I%20probably%20have%20spent%20less%20than%205%20minutes%20trying%20shit%20and%20now%20since%20the%20digital%20information%20age%20has%20destroyed%20my%20natural%20ability%20to%20be%20patient%2C%20I%20need%20the%20gratification%20now%20or%20I%20will%20stop%20playing%20your%20game.";
 
+// NVM I GUESS ITS FINE ART IS A LIE ANYWAYS
 const __1x0 = {
   "Rg==": "eW91IGRpZCBpdA==",
   "ZnVjayB5b3U=": "aGV5IGZ1Y2sgeW91IGJ1ZGR5",
