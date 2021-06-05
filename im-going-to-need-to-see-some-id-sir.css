@@ -1,0 +1,56 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+#myopic-lens-of-my-own-self-actualization {
+  display: inline-block;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -mac-osx-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  font-family: "ZCOOL KuaiLe", sans-serif;
+  color: white;
+  border: 1px solid white;
+  background-color: black;
+  position: absolute;
+  padding: 10px;
+}
+
+#container {
+  position: relative;
+}
+
+#legend {
+  top: 100px;
+  left: calc(50% - 400px);
+  font-size: 26px;
+  height: 120px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#legend::-webkit-scrollbar {
+  display: none;
+}
+
+#help {
+  top: 100px;
+  right: calc(50% - 400px);
+  font-size: 22px;
+}
