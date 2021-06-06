@@ -41,6 +41,17 @@ const __1x0 = {
   ZWF0IGRpY2tz: "eW91IGdvdCBtZSB0aGVyZQ==",
   c29tZXRoaW5n: "Y2xvc2UsIGJ1dCBubw==",
   cGxz: "aSB3b250IGhlbHA=",
+  YXNz: "KCAgWSAgKQ==",
+  "Ym9vYnM=": "ODAwODU=",
+  aG93: "aG93IHdoYXQ/",
+  "aG93IHRvIHdpbg==":
+    "SSB3b3VsZCBwYXkgbXkgcmVzcGVjdHMgaWYgb25seSBpIGhhZCB0aGUgcmlnaHQga2V5",
+  "aSBoYXRlIHRoaXMgZ2FtZQ==": "d2VsY29tZSB0byB0aGUgY2x1Yg==",
+  "cG9vcA==": "c2hpaWlpaWlpZXQ=",
+  "cGVuaXM=": "OD09PT09RH5+",
+  "cHVzc3k=": "b2sgdGhhdHMgZW5vdWdo",
+  d2lu: "d2luIHdoYXQ/",
+  "dGl0cw==": "KCAgLiAgWSAgLiAgKQ==",
 };
 
 const __0x2 = "Z3VucyBjYW4ndCB0YWxrIGlkaW90";
@@ -658,7 +669,7 @@ const main = (w, $c) => {
 
   setTimeout(() => {
     monologue = true;
-  }, 60000);
+  }, 80000 + Math.random() * 40000);
 };
 
 const $c = document.getElementById("myopic-lens-of-my-own-self-actualization");
