@@ -482,7 +482,6 @@ const main = (w, $c) => {
           reset();
         };
         KEYBINDS["KeyT"] = () => {
-          console.log("hit t");
           KEYBINDS._KeyTToggled = !KEYBINDS._KeyTToggled;
           if (KEYBINDS._KeyTToggled) {
             document.getElementById("chat").classList.remove("hidden");
@@ -511,10 +510,7 @@ const main = (w, $c) => {
   w.addEventListener("keydown", (e) => {
     if (KEYBINDS[e.code] && !keybindsDisabled) {
       KEYBINDS[e.code]();
-    } else {
-      console.log("miss", e.code);
     }
-    console.log(KEYBINDS);
   });
 
   const paintReason = () => {
@@ -604,3 +600,10 @@ const main = (w, $c) => {
 const $c = document.getElementById("myopic-lens-of-my-own-self-actualization");
 
 main(window, $c);
+
+console.log(
+  "%cthe source code is on github if you are really that curious",
+  "color:red; font-size:32px"
+);
+
+console.log("https://github.com/thelanzolini/indoors");
