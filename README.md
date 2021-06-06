@@ -2,6 +2,8 @@
 
 some canvas b#%$#!t
 
+[p l a y](https://thelanzolini.github.io/indoors/)
+
 ### about
 
 I'm a special kind of white guy.
