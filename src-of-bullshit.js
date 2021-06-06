@@ -12,8 +12,9 @@ const EMAIL_SUPPORT =
 // NVM I GUESS ITS FINE ART IS A LIE ANYWAYS
 const __1x0 = {
   "Rg==": "eW91IGRpZCBpdA==",
+  "Zg==": "eW91IGRpZCBpdA==",
   "ZnVjayB5b3U=": "aGV5IGZ1Y2sgeW91IGJ1ZGR5",
-  aG93IGRvIGkgd2lu: "aSdtIG5vdCBnb2luZyB0byBnaXZlIGl0IGF3YXk=",
+  aG93IGRvIGkgd2lu: "Y2FuIHdlIGdldCBGcyBpbiBjaGF0IGZvciB0aGlzIGRpbmd1cw==",
   "aGVsbG8=": "aGV5",
   "aGVscA==": "bm8=",
   "aSBhbSBnb2luZyB0byBraWxsIG15c2VsZg==":
@@ -111,6 +112,7 @@ const main = (w, $c) => {
   let nhozz = 1;
   let nozzle = MUDA_MUDA_god_mode ? 0.25 : nhozz;
   let bulletTimeout = null;
+  let jeff_bezos = false;
   window.$c = $c;
   $c.width = LENS_WIDTH;
   $c.height = LENS_HEIGHT;
@@ -229,14 +231,7 @@ const main = (w, $c) => {
     bullets.push(b);
     playYoutubeUrl(COLE_TRAIN_I_GET_IT_NOW_OMG);
     setTimeout(() => {
-      ctx.fillStyle = "black";
-      ctx.fillRect(0, 0, LENS_WIDTH, LENS_HEIGHT);
-      ctx.fillStyle = "green";
-      ctx.textAlign = "center";
-      ctx.font = "18px Courier New";
-      ctx.fillText(atob(__0x6), LENS_MID_W, LENS_MID_H);
-      bail = true;
-      ctx.textAlign = "left";
+      jeff_bezos = true;
     }, 10000);
   };
 
@@ -538,6 +533,16 @@ const main = (w, $c) => {
     }
   };
 
+  const paintJeff = () => {
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, LENS_WIDTH, LENS_HEIGHT);
+    ctx.fillStyle = "green";
+    ctx.textAlign = "center";
+    ctx.font = "18px Courier New";
+    ctx.fillText(atob(__0x6), LENS_MID_W, LENS_MID_H);
+    ctx.textAlign = "left";
+  };
+
   const mainSourceOfOurProblems = () => {
     paintItBlack();
     paintGun();
@@ -549,6 +554,10 @@ const main = (w, $c) => {
     paintReason();
     if (lives < 0 || lives > 3) {
       paintGameOver();
+      bail = true;
+    }
+    if (jeff_bezos) {
+      paintJeff();
       bail = true;
     }
   };
@@ -605,6 +614,17 @@ const main = (w, $c) => {
     bulletTimeout = setTimeout(goBulletGo, 1000 / bps);
     amIReallyDoingThis();
   };
+
+  document.addEventListener("scroll", () => {
+    const s = document.documentElement.scrollTop * 1.05;
+    const prog =
+      document.documentElement.scrollTop /
+      document.documentElement.scrollHeight;
+    document.getElementById("indoors").style.transform = `translateY(${s}px)`;
+    document.getElementById("indoors").style.color = `rgb(255, ${
+      255 - 255 * prog
+    }, ${255 - 255 * prog})`;
+  });
 };
 
 const $c = document.getElementById("myopic-lens-of-my-own-self-actualization");
