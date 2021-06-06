@@ -12,6 +12,9 @@ And use my privelage for the good.
 
 Which is why I am using `main` instead of `master`
 
+i still have the muscle memory tho
+![oops](/still-have-that-muscle-memory-tho.png)
+
 #### faq
 
 why?
