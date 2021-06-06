@@ -1,10 +1,27 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  min-height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 body {
   margin: 0;
+}
+
+h1 {
+  font-family: "ZCOOL KuaiLe", sans-serif;
+  font-size: 150px;
+  width: 100%;
+  letter-spacing: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h3,
+h6 {
+  font-weight: normal;
 }
 
 #myopic-lens-of-my-own-self-actualization {
@@ -127,5 +144,26 @@ ul {
   border: none;
   text-indent: -99999999999999px;
   cursor: pointer;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+#chungus,
+#chungus-2 {
+  height: 10000px;
+}
+
+.btn {
+  width: 50%;
+  padding: 20px;
+  color: black;
+  background-color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
 }

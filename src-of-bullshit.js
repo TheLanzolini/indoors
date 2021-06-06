@@ -50,7 +50,9 @@ const LENS_MID_H = LENS_HEIGHT / 2;
 
 const destroyYoutube = () => {
   document.getElementById("embedded-joke") &&
-    document.body.removeChild(document.getElementById("embedded-joke"));
+    document
+      .querySelector("main")
+      .removeChild(document.getElementById("embedded-joke"));
 };
 
 const playYoutubeUrl = (url) => {
@@ -69,7 +71,9 @@ const playYoutubeUrl = (url) => {
   );
   $iframe.setAttribute("allowfullscreen", "");
   $e.appendChild($iframe);
-  document.body.appendChild($e);
+  document
+    .querySelector("main")
+    .insertBefore($e, document.getElementById("chungus"));
 };
 
 const showPanhandle = () => {
@@ -213,6 +217,12 @@ const main = (w, $c) => {
   };
 
   $chatInput.addEventListener("blur", onChatBlur);
+
+  document
+    .getElementById("started-at-the-bottom")
+    .addEventListener("click", () => {
+      document.documentElement.scrollTop = 0;
+    });
 
   const quarterLifeCrisis = () => {
     const b = new Bullet(LENS_WIDTH, LENS_HEIGHT - 50, 0, -0.65, 0);
