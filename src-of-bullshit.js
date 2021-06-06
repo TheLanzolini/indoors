@@ -8,10 +8,10 @@ const METAL = "https://www.youtube.com/embed/wPSWsz2R6Xc";
 const COLE_TRAIN_I_GET_IT_NOW_OMG = "https://www.youtube.com/embed/yPk1LtESE-U";
 const EMAIL_SUPPORT =
   "mailto:support@lanzo.tv?subject=I%20need%20help%20with%20indoors!&body=Please%20tell%20me%20the%20answer%20I%20do%20not%20know%20how%20to%20make%20progress%20in%20this%20%22game%22%20if%20you%20can%20even%20call%20it%20that.%20I%20probably%20have%20spent%20less%20than%205%20minutes%20trying%20shit%20and%20now%20since%20the%20digital%20information%20age%20has%20destroyed%20my%20natural%20ability%20to%20be%20patient%2C%20I%20need%20the%20gratification%20now%20or%20I%20will%20stop%20playing%20your%20game.";
-
+const __0x7 =
+  "SGV5LCBzb3JyeSBpZiB0aGlzIGlzIHRha2luZyBhIHdoaWxlIHRvIHNvbHZlLiBMaWZlIGNhbiBiZSBsaWtlIHRoaXMgc29tZXRpbWVzLiBUaGVyZSBpc24ndCBhIGNsZWFyIHBhdGggZm9yd2FyZC4gV2UncmUgYWxsIGp1c3Qgd2luZ2luZyBpdC4gVHJ5aW5nIHJhbmRvbSBzaGl0IHVudGlsIHdlIGZpZ3VyZSBpdCBvdXQuIE5vdCBnb25uYSBsaWUgSSd2ZSBoYWQgYSByb3VnaCBvbmUgdGhpcyBwYXN0IGNvdXBsZSBvZiBtb29uIGN5Y2xlcy4gICAgICAgSSB1c2VkIHRvIGJlIHZlcnkgb3ZlcndlaWdodC4gSSBkaWRuJ3QgbGlrZSBteSBqb2IsIGFuZCBJIHRvbGQgbXlzZWxmIEkgY2FuIHNlbGYtaW1wcm92ZS4gQW5kIEkgZGlkISBJIG1vdmVkIGFjcm9zcyB0aGUgY291bnRyeSBhbmQgc3RhcnRlZCBhIG5ldyBqb2IuIEkgd2FzIGluIHRoZSBiaWcgY2l0eSBlYXRpbmcgd2VsbCBhbmQgd29ya2luZyBvdXQuIEkgc3RvcHBlZCBoYXZpbmcgYW54aWV0eSBhdHRhY2tzIGFuZCBJIGNvdWxkIHNtb2tlIHBvdCBsZWdhbGx5LiBUaGVuIGEgZm9yY2UgbWFqZXVyZSBoYXBwZW5lZCBhbmQgSSBmZWVsIHJpZ2h0IGJhY2sgdG8gd2hlcmUgSSBzdGFydGVkLiBJIGhhdmUgYmVlbi4uLiBleGlzdGluZyBpbiB0aGlzIHJvb20gZm9yIG1vbnRocyBhbmQgSSBhbSBub3QgbGl2aW5nLiBJJ20gbm90IHBlc3NpbWlzdGljIHRob3VnaC4gV2Ugd2lsbCBnZXQgdGhyb3VnaCB0aGlzLiBIZXksIHdoYXQgY2FuIHlvdSBzYXksIHdlIHdlcmUgb3ZlcmR1ZS4gSXQnbGwgYmUgb3ZlciBzb29uLiBKdXN0IHdhaXQu";
 // NVM I GUESS ITS FINE ART IS A LIE ANYWAYS
 const __1x0 = {
-  "Rg==": "eW91IGRpZCBpdA==",
   "Zg==": "eW91IGRpZCBpdA==",
   "ZnVjayB5b3U=": "aGV5IGZ1Y2sgeW91IGJ1ZGR5",
   aG93IGRvIGkgd2lu: "Y2FuIHdlIGdldCBGcyBpbiBjaGF0IGZvciB0aGlzIGRpbmd1cw==",
@@ -34,6 +34,13 @@ const __1x0 = {
   dXd1: "Z3Jvc3M=",
   "c3RvcA==": "c3RvcCB3aGF0",
   d2hhdCBkbyBpIGRv: "aWRrIGxvb2sgY2xvc2Vy",
+  "L2hlbHA=": "dGhlcmUgaXMgbm8gb25lIGNvbWluZyB0byAvaGVscA==",
+  "Oig=": "Oik=",
+  "Z29kbW9kZQ==":
+    "aSBsb3ZlIGplc3VzIGNocmlzdCBhbmQgamVzdXMgY2hyaXN0IGxvdmVzIG1l",
+  ZWF0IGRpY2tz: "eW91IGdvdCBtZSB0aGVyZQ==",
+  c29tZXRoaW5n: "Y2xvc2UsIGJ1dCBubw==",
+  cGxz: "aSB3b250IGhlbHA=",
 };
 
 const __0x2 = "Z3VucyBjYW4ndCB0YWxrIGlkaW90";
@@ -82,12 +89,16 @@ const showPanhandle = () => {
   const $i = new Image();
   $i.id = "just-the-tip";
   $i.src = "tipping-is-wage-theft.png";
-  document.body.appendChild($i);
+  document
+    .querySelector("main")
+    .insertBefore($i, document.getElementById("chungus"));
 };
 
 const hidePanhandle = () => {
   document.getElementById("just-the-tip") &&
-    document.body.removeChild(document.getElementById("just-the-tip"));
+    document
+      .querySelector("main")
+      .removeChild(document.getElementById("just-the-tip"));
 };
 
 const main = (w, $c) => {
@@ -96,12 +107,11 @@ const main = (w, $c) => {
   let frames = 0;
   let fps = 0;
   let fpsEnabled = false;
-  let startTime, now, then, elapsed;
+  let now, then, elapsed;
   let reasonEnabled = false;
   let messages = 0;
   let reasonTimeout = null;
   let keybindsDisabled = false;
-  let currentMessage = "";
   let reasons = 0;
   let bulletWidth = 3;
   let paintYou = true;
@@ -113,7 +123,8 @@ const main = (w, $c) => {
   let nozzle = MUDA_MUDA_god_mode ? 0.25 : nhozz;
   let bulletTimeout = null;
   let jeff_bezos = false;
-  window.$c = $c;
+  let apology = (window.$c = $c);
+  let monologue = false;
   $c.width = LENS_WIDTH;
   $c.height = LENS_HEIGHT;
   const ctx = $c.getContext("2d");
@@ -168,7 +179,6 @@ const main = (w, $c) => {
 
   const $colorInput = document.getElementById("color-input");
   const onColorInput = (e) => {
-    console.log("asd");
     backgroundColor = e.target.value;
   };
   $colorInput.addEventListener("input", onColorInput);
@@ -240,9 +250,9 @@ const main = (w, $c) => {
     const $d = document.createElement("div");
     $d.textContent = `Me: ${msg}`;
     document.getElementById("chat-log").appendChild($d);
-    if (__1x0[btoa(msg.toLowerCase())]) {
+    if (__1x0[btoa(msg)]) {
       const $dd = document.createElement("div");
-      $dd.textContent = `Game: ${atob(__1x0[btoa(msg.toLowerCase())])}`;
+      $dd.textContent = `Game: ${atob(__1x0[btoa(msg)])}`;
       document.getElementById("chat-log").appendChild($dd);
     }
     if (messages > 7 && messages < 9) {
@@ -250,14 +260,14 @@ const main = (w, $c) => {
       $dd.textContent = `Game: just so you know this thing has a limited number of responses its not a fucking ai`;
       document.getElementById("chat-log").appendChild($dd);
     }
-    if (btoa(msg) === btoa("__F__".replace(/__/g, ""))) {
+    if (btoa(msg) === btoa("__f__".replace(/__/g, ""))) {
       quarterLifeCrisis();
     }
   };
 
   $chatInput.addEventListener("keydown", (e) => {
     if (e.code === "Enter") {
-      sendMessage(e.target.value);
+      sendMessage(e.target.value.toLowerCase());
       e.target.value = "";
     }
   });
@@ -297,6 +307,9 @@ const main = (w, $c) => {
   const paintPlayer = () => {
     ctx.fillStyle = "blue";
     playerInfo.y = playerInfo.y + playerInfo.ySpeed;
+    if (playerInfo.y < 150) {
+      playerInfo.ySpeed = 0;
+    }
     ctx.fillRect(
       playerInfo.x,
       playerInfo.y,
@@ -408,6 +421,7 @@ const main = (w, $c) => {
     _KeyLToggled: false,
     _KeyHToggled: false,
     _KeyCToggled: false,
+    _KeyOToggled: false,
     _Digit4Toggled: false,
     _BackquoteToggled: false,
     _KeyTToggled: false,
@@ -472,7 +486,12 @@ const main = (w, $c) => {
               playYoutubeUrl(METAL);
             };
             KEYBINDS["KeyO"] = () => {
-              showPanhandle();
+              KEYBINDS._KeyOToggled = !KEYBINDS._KeyOToggled;
+              if (KEYBINDS._KeyOToggled) {
+                showPanhandle();
+              } else {
+                hidePanhandle();
+              }
             };
             KEYBINDS["KeyE"] = () => {
               window.open(EMAIL_SUPPORT);
@@ -543,6 +562,16 @@ const main = (w, $c) => {
     ctx.textAlign = "left";
   };
 
+  let mx = LENS_WIDTH;
+
+  const paintMonologue = () => {
+    if (!monologue) return;
+    ctx.fillStyle = "white";
+    ctx.font = "18px Arial";
+    mx = mx - 0.3;
+    ctx.fillText(atob(__0x7), mx, LENS_HEIGHT - 100);
+  };
+
   const mainSourceOfOurProblems = () => {
     paintItBlack();
     paintGun();
@@ -552,6 +581,7 @@ const main = (w, $c) => {
     paintShotsCounter();
     paintLegend();
     paintReason();
+    paintMonologue();
     if (lives < 0 || lives > 3) {
       paintGameOver();
       bail = true;
@@ -625,6 +655,10 @@ const main = (w, $c) => {
       255 - 255 * prog
     }, ${255 - 255 * prog})`;
   });
+
+  setTimeout(() => {
+    monologue = true;
+  }, 60000);
 };
 
 const $c = document.getElementById("myopic-lens-of-my-own-self-actualization");
