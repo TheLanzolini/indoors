@@ -62,6 +62,10 @@ ul {
   scrollbar-width: none;
 }
 
+#legend li {
+  height: 26px;
+}
+
 #legend::-webkit-scrollbar {
   display: none;
 }
@@ -73,7 +77,7 @@ ul {
 }
 
 #just-the-tip {
-  max-width: 100%;
+  width: 320px;
 }
 
 #controls {
@@ -166,4 +170,40 @@ ul {
   color: white;
   background-color: black;
   border: 2px solid white;
+}
+
+#dev > #pw {
+  height: 1.5rem;
+  margin-left: 8px;
+}
+
+#dev {
+  max-width: 400px;
+  display: flex;
+  max-height: 300px;
+  top: 250px;
+  right: calc(50% - 430px);
+}
+
+#dev > div {
+  flex: 1;
+}
+
+#now-where-did-i-put-those-damn-keys {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+#now-where-did-i-put-those-damn-keys > div {
+  cursor: pointer;
+}
+
+#now-where-did-i-put-those-damn-keys > div:hover {
+  text-decoration: underline;
+}
+
+#i-have-the-same-glasses-as-some-women {
+  overflow-y: scroll;
+  text-align: left;
 }

@@ -9,7 +9,7 @@ const COLE_TRAIN_I_GET_IT_NOW_OMG = "https://www.youtube.com/embed/yPk1LtESE-U";
 const EMAIL_SUPPORT =
   "mailto:support@lanzo.tv?subject=I%20need%20help%20with%20indoors!&body=Please%20tell%20me%20the%20answer%20I%20do%20not%20know%20how%20to%20make%20progress%20in%20this%20%22game%22%20if%20you%20can%20even%20call%20it%20that.%20I%20probably%20have%20spent%20less%20than%205%20minutes%20trying%20shit%20and%20now%20since%20the%20digital%20information%20age%20has%20destroyed%20my%20natural%20ability%20to%20be%20patient%2C%20I%20need%20the%20gratification%20now%20or%20I%20will%20stop%20playing%20your%20game.";
 const __0x7 =
-  "SGV5LCBzb3JyeSBpZiB0aGlzIGlzIHRha2luZyBhIHdoaWxlIHRvIHNvbHZlLiBMaWZlIGNhbiBiZSBsaWtlIHRoaXMgc29tZXRpbWVzLiBUaGVyZSBpc24ndCBhIGNsZWFyIHBhdGggZm9yd2FyZC4gV2UncmUgYWxsIGp1c3Qgd2luZ2luZyBpdC4gVHJ5aW5nIHJhbmRvbSBzaGl0IHVudGlsIHdlIGZpZ3VyZSBpdCBvdXQuIE5vdCBnb25uYSBsaWUgSSd2ZSBoYWQgYSByb3VnaCBvbmUgdGhpcyBwYXN0IGNvdXBsZSBvZiBtb29uIGN5Y2xlcy4gICAgICAgSSB1c2VkIHRvIGJlIHZlcnkgb3ZlcndlaWdodC4gSSBkaWRuJ3QgbGlrZSBteSBqb2IsIGFuZCBJIHRvbGQgbXlzZWxmIEkgY2FuIHNlbGYtaW1wcm92ZS4gQW5kIEkgZGlkISBJIG1vdmVkIGFjcm9zcyB0aGUgY291bnRyeSBhbmQgc3RhcnRlZCBhIG5ldyBqb2IuIEkgd2FzIGluIHRoZSBiaWcgY2l0eSBlYXRpbmcgd2VsbCBhbmQgd29ya2luZyBvdXQuIEkgc3RvcHBlZCBoYXZpbmcgYW54aWV0eSBhdHRhY2tzIGFuZCBJIGNvdWxkIHNtb2tlIHBvdCBsZWdhbGx5LiBUaGVuIGEgZm9yY2UgbWFqZXVyZSBoYXBwZW5lZCBhbmQgSSBmZWVsIHJpZ2h0IGJhY2sgdG8gd2hlcmUgSSBzdGFydGVkLiBJIGhhdmUgYmVlbi4uLiBleGlzdGluZyBpbiB0aGlzIHJvb20gZm9yIG1vbnRocyBhbmQgSSBhbSBub3QgbGl2aW5nLiBJJ20gbm90IHBlc3NpbWlzdGljIHRob3VnaC4gV2Ugd2lsbCBnZXQgdGhyb3VnaCB0aGlzLiBIZXksIHdoYXQgY2FuIHlvdSBzYXksIHdlIHdlcmUgb3ZlcmR1ZS4gSXQnbGwgYmUgb3ZlciBzb29uLiBKdXN0IHdhaXQu";
+  "SGV5LCBzb3JyeSBpZiB0aGlzIGlzIHRha2luZyBhIHdoaWxlIHRvIHNvbHZlLiBMaWZlIGNhbiBiZSBsaWtlIHRoaXMgc29tZXRpbWVzLiBUaGVyZSBpc24ndCBhIGNsZWFyIHBhdGggZm9yd2FyZC4gV2UncmUgYWxsIGp1c3Qgd2luZ2luZyBpdC4gVHJ5aW5nIHJhbmRvbSBzaGl0IHVudGlsIHdlIGZpZ3VyZSBpdCBvdXQuIEluc3RlYWQgb2YgYmVpbmcgdG9sZCB0aGUgYW5zd2VyLCBzb21ldGltZXMgaXQgaGFzIHRvIGJlIHVwIHRvIHVzIHRvIGZpZ3VyZSBpdCBvdXQgZm9yIG91cnNlbHZlcy4gICAgICAgICAgICAgICAgICAgTm90IGdvbm5hIGxpZSBJJ3ZlIGhhZCBhIHJvdWdoIG9uZSB0aGlzIHBhc3QgY291cGxlIG9mIG1vb24gY3ljbGVzLiAgICAgICBJIHVzZWQgdG8gYmUgdW5oYXBweS4gSSBkaWRuJ3QgbGlrZSBteSBqb2IsIGFuZCBJIHRvbGQgbXlzZWxmIEkgY2FuIGltcHJvdmUgYnkgbXlzZWxmIGJvdGggcGh5c2ljYWxseSBhbmQgbWVudGFsbHkuIEFuZCBJIGRpZCEgSSBtb3ZlZCBhY3Jvc3MgdGhlIGNvdW50cnkgYW5kIHN0YXJ0ZWQgYSBuZXcgam9iLiBJIHdhcyBpbiB0aGUgYmlnIGNpdHkgZWF0aW5nIHdlbGwgYW5kIHdvcmtpbmcgb3V0LiBJIHN0b3BwZWQgaGF2aW5nIGFueGlldHkgYXR0YWNrcyBhbmQgSSBmZWx0Li4gaGFwcHkgZm9yIHRoZSBmaXJzdCB0aW1lIGluIGEgbG9uZyB0aW1lLiBIb3dldmVyLCBUaGlzIHBhc3QgeWVhciBoYXMgcmVhbGx5IHN1Y2tlZC4gSSBoYXZlIGJlZW4uLi4gZXhpc3RpbmcgaW4ganVzdCB0aGlzIHJvb20gZm9yIG1vbnRocyBhbmQgSSBhbSBub3QgbGl2aW5nLiBJIGZlZWwganVzdCBhcyBzaGl0dHkgYXMgSSBkaWQgYWxsIHRob3NlIHllYXJzIGFnbyB3aGVuIEkgaGFkIG5vIGRpcmVjdGlvbi4gSSdtIG5vdCBwZXNzaW1pc3RpYyB0aG91Z2guIFdlIHdpbGwgZ2V0IHRocm91Z2ggdGhpcy4gICAgICBIZXksIHdoYXQgY2FuIHlvdSBzYXksIHdlIHdlcmUgb3ZlcmR1ZS4gSXQnbGwgYmUgb3ZlciBzb29uLiBZb3Ugd2FpdC4gICAgICAgIFRoYW5rcyBmb3IgbGlzdGVuaW5nLiBBbHNvIHRoYW5rcyBmb3IgcGxheWluZyBteSBnYW1lLiAtIExhbnpvICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaGF2ZSB5b3UgdHJpZWQgYXNraW5nIGluIHRoZSBjaGF0ICdob3cgZG8gaSB3aW4nPw==";
 // NVM I GUESS ITS FINE ART IS A LIE ANYWAYS
 const __1x0 = {
   "Zg==": "eW91IGRpZCBpdA==",
@@ -52,6 +52,13 @@ const __1x0 = {
   "cHVzc3k=": "b2sgdGhhdHMgZW5vdWdo",
   d2lu: "d2luIHdoYXQ/",
   "dGl0cw==": "KCAgLiAgWSAgLiAgKQ==",
+  "cGFzc3dvcmQ=": "NDIwYmxhemVpdA==",
+  SnVuZSA0LCAxOTg5:
+    "VGhlIFRpYW5hbm1lbiBTcXVhcmUgcHJvdGVzdHMsIGtub3duIGFzIHRoZSBKdW5lIEZvdXJ0aCBJbmNpZGVudCBpbiBDaGluYSwgd2VyZSBzdHVkZW50LWxlZCBkZW1vbnN0cmF0aW9ucyBoZWxkIGluIFRpYW5hbm1lbiBTcXVhcmUsIEJlaWppbmcgZHVyaW5nIDE5ODkuIEluIHdoYXQgaXMga25vd24gYXMgdGhlIFRpYW5hbm1lbiBTcXVhcmUgTWFzc2FjcmUsIHRyb29wcyBhcm1lZCB3aXRoIGFzc2F1bHQgcmlmbGVzIGFuZCBhY2NvbXBhbmllZCBieSB0YW5rcyBmaXJlZCBhdCB0aGUgZGVtb25zdHJhdG9ycyBhbmQgdGhvc2UgdHJ5aW5nIHRvIGJsb2NrIHRoZSBtaWxpdGFyeSdzIGFkdmFuY2UgaW50byBUaWFuYW5tZW4gU3F1YXJlLiBUaGUgcHJvdGVzdHMgc3RhcnRlZCBvbiBBcHJpbCAxNSBhbmQgd2VyZSBmb3JjaWJseSBzdXBwcmVzc2VkIG9uIEp1bmUgNCB3aGVuIHRoZSBnb3Zlcm5tZW50IGRlY2xhcmVkIG1hcnRpYWwgbGF3IGFuZCBzZW50IHRoZSBQZW9wbGUncyBMaWJlcmF0aW9uIEFybXkgdG8gb2NjdXB5IHBhcnRzIG9mIGNlbnRyYWwgQmVpamluZy4gRXN0aW1hdGVzIG9mIHRoZSBkZWF0aCB0b2xsIHZhcnkgZnJvbSBzZXZlcmFsIGh1bmRyZWQgdG8gc2V2ZXJhbCB0aG91c2FuZCwgd2l0aCB0aG91c2FuZHMgbW9yZSB3b3VuZGVkLg==",
+  "RGlkIHlvdSBldmVyIGhlYXIgdGhlIFRyYWdlZHkgb2YgRGFydGggUGxhZ3VlaXMgdGhlIHdpc2U=":
+    "SSB0aG91Z2h0IG5vdC4gSXQncyBub3QgYSBzdG9yeSB0aGUgSmVkaSB3b3VsZCB0ZWxsIHlvdQ==",
+  aXQgaXMgd2VkbmVzZGF5IG15IGR1ZGVz:
+    "aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kdS1UWTFHVUZHaw==",
 };
 
 const __0x2 = "Z3VucyBjYW4ndCB0YWxrIGlkaW90";
@@ -59,6 +66,8 @@ const __0x3 = "Z3VucyBzdGlsbCBjYW4ndCB0YWxr";
 const __0x4 = "Z3VucyBzdGlsbCBjYW4ndCB0YWxrIGlkaW90";
 const __0x5 = "ZnVjayB5b3Ugc3RvcCBjYWxsaW5n";
 const __0x6 = "Y29uZ3JhdHVsYXRpb25z";
+const __0x8 = "dGhhbmtzIGZvciBwbGF5aW5n";
+const __0x9 = "NDIwYmxhemVpdA==";
 
 const LENS_WIDTH = 900;
 const LENS_HEIGHT = 600;
@@ -135,6 +144,7 @@ const main = (w, $c) => {
   let bulletTimeout = null;
   let jeff_bezos = false;
   let apology = (window.$c = $c);
+  let as_secure_as_equifax = false;
   let monologue = false;
   $c.width = LENS_WIDTH;
   $c.height = LENS_HEIGHT;
@@ -241,6 +251,64 @@ const main = (w, $c) => {
 
   $chatInput.addEventListener("blur", onChatBlur);
 
+  const $pwInput = document.getElementById("pw");
+  const $devDiv = document.getElementById("dev");
+  $pwInput.addEventListener("focus", onChatFocus);
+  $pwInput.addEventListener("blur", onChatBlur);
+  $pwInput.addEventListener("input", (e) => {
+    if (btoa(e.target.value) === __0x9) {
+      as_secure_as_equifax = true;
+      keybindsDisabled = false;
+      while ($devDiv.lastChild) {
+        $devDiv.removeChild($devDiv.lastChild);
+      }
+      const codes = {
+        __0x1,
+        __0x7,
+        __0x2,
+        __0x3,
+        __0x4,
+        __0x5,
+        __0x6,
+        __0x8,
+        __0x9,
+        ...__1x0,
+      };
+      const $keys = document.createElement("div");
+      $keys.id = "now-where-did-i-put-those-damn-keys";
+      const $lens = document.createElement("div");
+      $lens.id = "i-have-the-same-glasses-as-some-women";
+      Object.keys(codes).forEach((c) => {
+        const $d = document.createElement("div");
+        $d.textContent = c;
+        $d.addEventListener("click", () => {
+          let key;
+          try {
+            key = atob(c);
+          } catch (e) {
+            key = c;
+          }
+
+          const $k = document.createElement("div");
+          $k.textContent = key;
+          const $v = document.createElement("div");
+          $v.textContent = atob(codes[c]);
+
+          while ($lens.lastChild) {
+            $lens.removeChild($lens.lastChild);
+          }
+
+          $lens.appendChild($k);
+          $lens.appendChild(document.createElement("br"));
+          $lens.appendChild($v);
+        });
+        $keys.appendChild($d);
+      });
+      $devDiv.appendChild($keys);
+      $devDiv.appendChild($lens);
+    }
+  });
+
   document
     .getElementById("started-at-the-bottom")
     .addEventListener("click", () => {
@@ -251,6 +319,7 @@ const main = (w, $c) => {
     const b = new Bullet(LENS_WIDTH, LENS_HEIGHT - 50, 0, -0.65, 0);
     bullets.push(b);
     playYoutubeUrl(COLE_TRAIN_I_GET_IT_NOW_OMG);
+    lives = 69;
     setTimeout(() => {
       jeff_bezos = true;
     }, 10000);
@@ -416,6 +485,16 @@ const main = (w, $c) => {
     $admin.classList.add("hidden");
   };
 
+  const openDevPanel = () => {
+    const $dev = document.getElementById("dev");
+    $dev.classList.remove("hidden");
+  };
+
+  const closeDevPanel = () => {
+    const $dev = document.getElementById("dev");
+    $dev.classList.add("hidden");
+  };
+
   const KEYBINDS = {
     _removeAllBut: (...keys) => {
       Object.keys(KEYBINDS).forEach((k) => {
@@ -436,6 +515,7 @@ const main = (w, $c) => {
     _Digit4Toggled: false,
     _BackquoteToggled: false,
     _KeyTToggled: false,
+    _KeyPToggled: false,
     KeyL: () => {
       KEYBINDS._KeyLToggled = !KEYBINDS._KeyLToggled;
       if (KEYBINDS._KeyLToggled) {
@@ -507,6 +587,14 @@ const main = (w, $c) => {
             KEYBINDS["KeyE"] = () => {
               window.open(EMAIL_SUPPORT);
             };
+            KEYBINDS["KeyP"] = () => {
+              KEYBINDS._KeyPToggled = !KEYBINDS._KeyPToggled;
+              if (KEYBINDS._KeyPToggled) {
+                openDevPanel();
+              } else {
+                closeDevPanel();
+              }
+            };
           } else {
             KEYBINDS._deleteSeries(["KeyG", "KeyM", "KeyD", "KeyO", "KeyE"]);
             hidePanhandle();
@@ -570,6 +658,8 @@ const main = (w, $c) => {
     ctx.textAlign = "center";
     ctx.font = "18px Courier New";
     ctx.fillText(atob(__0x6), LENS_MID_W, LENS_MID_H);
+    ctx.font = "14px Courier New";
+    ctx.fillText(atob(__0x8), LENS_MID_W, LENS_MID_H + 30);
     ctx.textAlign = "left";
   };
 
@@ -593,7 +683,7 @@ const main = (w, $c) => {
     paintLegend();
     paintReason();
     paintMonologue();
-    if (lives < 0 || lives > 3) {
+    if (lives < 0) {
       paintGameOver();
       bail = true;
     }
