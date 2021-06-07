@@ -759,7 +759,7 @@ const main = (w, $c) => {
 
   setTimeout(() => {
     monologue = true;
-  }, 120000 + Math.random() * 60000);
+  }, 180000 + Math.random() * 120000);
 };
 
 const $c = document.getElementById("myopic-lens-of-my-own-self-actualization");
