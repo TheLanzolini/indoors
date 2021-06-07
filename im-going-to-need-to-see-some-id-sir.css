@@ -15,13 +15,18 @@ h1 {
   font-size: 150px;
   width: 100%;
   letter-spacing: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h3,
 h6 {
   font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 8px 0;
 }
 
 #myopic-lens-of-my-own-self-actualization {
