@@ -346,7 +346,7 @@ const main = (w, $c) => {
   };
 
   $chatInput.addEventListener("keydown", (e) => {
-    if (e.code === "Enter") {
+    if (e.code === "Enter" || e.keyCode === 13 || e.which === 13) {
       sendMessage(e.target.value.toLowerCase());
       e.target.value = "";
     }
@@ -468,12 +468,12 @@ const main = (w, $c) => {
     ctx.fillText(`Shots: ${shots}`, LENS_MID_W + 40, 20);
   };
 
-  const paintLegend = () => {
-    ctx.fillStyle = "white";
-    ctx.font = "22px ZCOOL KuaiLe";
-    ctx.textAlign = "left";
-    ctx.fillText(`L = Legend`, 20, LENS_HEIGHT - 20);
-  };
+  // const paintLegend = () => {
+    // ctx.fillStyle = "white";
+    // ctx.font = "22px ZCOOL KuaiLe";
+    // ctx.textAlign = "left";
+    // ctx.fillText(`L = Legend`, 20, LENS_HEIGHT - 20);
+  // };
 
   const openAdmin = () => {
     const $admin = document.getElementById("admin");
@@ -636,6 +636,13 @@ const main = (w, $c) => {
     }
   });
 
+  w.addEventListener("click", (e) => {
+    const id = e.target && e.target.id;
+  	if (KEYBINDS[id] && !keybindsDisabled) {
+  	  KEYBINDS[id]();
+  	}
+  });
+
   const paintReason = () => {
     if (!reasonEnabled) return;
     ctx.fillStyle = "silver";
@@ -680,7 +687,7 @@ const main = (w, $c) => {
     paintBullets();
     paintPlayer();
     paintShotsCounter();
-    paintLegend();
+    // paintLegend();
     paintReason();
     paintMonologue();
     if (lives < 0) {

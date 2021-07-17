@@ -97,6 +97,11 @@ ul {
   font-size: 20px;
 }
 
+#fucking-mobile-support {
+  bottom: 0;
+  left: calc(50% - 400px);
+}
+
 #chat {
   position: absolute;
   background-color: black;
